@@ -8,7 +8,7 @@ describe('template spec', () => {
     cy.get('h1').contains('MEICM')
   })
   it('greeting is rendered from the database', () => {
-    cy.request('<YOUR CLOUDFLARE WORKER URL>')
+    cy.request('https://my-app.2221437.workers.dev')
       .its('body')
       .should('match', /<h1>Hello, .+!<\/h1>/)
   })
